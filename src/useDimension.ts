@@ -12,6 +12,7 @@ export function useDimension(dimension = "width") {
     observer.value = new ResizeObserver((entries) => {
       //   element.value.textContent = entries[0].contentRect[dimension];
       element.value.textContent = (entries[0].contentRect as any)[dimension];
+
       console.log("element.value.textContent => ", element.value.textContent);
     });
 
